@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./script/app.js" defer></script>
+  <link rel="stylesheet" href="./style/reset-styles.css">
+  <link rel="stylesheet" href="./style/styles.css">
+  <title>Password Generator</title>
+</head>
+
+<body class="pass-gen">
+  <div class="pass-gen__container">
+    <h1 class="pass-gen__title">
+      Password Generator
+    </h1>
+    <div class="pass-gen__password-container" id="passwordContainer">
+      <h2 class="pass-gen__password" id="passwordDisplay">
+        Password
+      </h2>
+      <h2 class="pass-gen__copy-popup" id="copyMessage">
+        Copied to clipboard!
+      </h2>
+      <img class="pass-gen__copy-icon" src="./icon/files_labeled_outlined@1x.svg" alt="">
+    </div>
+    <div class="pass-gen__setting-container">
+      <label class="pass-gen__range-wrapper" for="range-length">
+        Password Length
+        <output class="pass-gen__range-number" id="rangeNumber">16</output>
+        <input class="pass-gen__range" type="range" min="8" max="24" value="16" id="rangeLength"
+          oninput="rangeNumber.value=value">
+      </label>
+
+      <label class="pass-gen__checkbox-wrapper" for="uppercase">
+        <input type="checkbox" id="uppercase">
+        <span class="pass-gen__checkmark"></span>
+        Include Uppercase
+      </label>
+
+      <label class="pass-gen__checkbox-wrapper" for="number">
+        <input type="checkbox" id="number">
+        <span class="pass-gen__checkmark"></span>
+        Include Numbers
+      </label>
+
+      <label class="pass-gen__checkbox-wrapper" for="symbol">
+        <input type="checkbox" id="symbol">
+        <span class="pass-gen__checkmark"></span>
+        Include Symbols
+      </label>
+
+      <div class="pass-gen__strength" id="strengthDisplay">
+        STRENGTH:
+      </div>
+      <button class="pass-gen__button" type="submit" id="submitButton">
+        Generate
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
